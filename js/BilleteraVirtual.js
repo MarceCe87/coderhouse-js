@@ -53,16 +53,6 @@ class BilleteraVirtual
         }
     }
 
-    BuscarMovimientosPorId(){
-        const id = parseInt(prompt("Ingrese el Id de movimiento:"));
-        const movimiento = this.movimientos.find((mov) => mov.id == id);
-        if(movimiento){
-            console.log(`Movimiento Id: ${movimiento.id}, Tipo: ${movimiento.tipo}, Importe: ${movimiento.importe}.`);
-        }else{
-            console.log(`EL ID INGRESADO NO CORRESPONDE A NINGUN MOVIMIENTO EXISTENTE`);
-        }
-    }
-
     StorageToList(){
         for(let i = 0; i < localStorage.length; i++){
             let key = localStorage.key(i);
