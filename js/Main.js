@@ -29,7 +29,7 @@ function init(){
     btnCuenta.onclick = () => {
       Swal.fire({
         title: 'Datos de la cuenta',
-        html: `<p>Numero: 0005500480</p>\n <p>CVU: 17000005544452</p>\n <p>Alias: CODER.CURSO.JS</p>`,
+        html: `<p>Numero: 0005500480</p>\n <p>CBU: 17000005544452</p>\n <p>Alias: CODER.CURSO.JS</p>`,
         icon: 'warning',
         confirmButtonText: 'Aceptar',
         customClass: 'swal-wide'
@@ -78,6 +78,10 @@ function init(){
         showCancelButton: true,
         inputValidator: (value) => {
           if (!value ) {
+            return 'Monto invalido!'
+          }
+
+          if(tipo == "Agregar" && value <= 0){
             return 'Monto invalido!'
           }
 
